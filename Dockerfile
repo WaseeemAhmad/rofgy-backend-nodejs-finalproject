@@ -1,19 +1,20 @@
-FROM node:18.12.1-bullseye-slim
+# Use official Node.js LTS image
+FROM node:18
 
-# Set the working directory in the container
-WORKDIR /app
+# Set working directory
+WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json to the working directory
+# Copy dependencies files
 COPY package*.json ./
 
-# Install app dependencies
+# Install dependencies
 RUN npm install
 
-# Copy necessary files
+# Copy rest of the code
 COPY . .
 
-# Expose port 3000 (adjust the port based on your application)
+# Expose port
 EXPOSE 3000
 
-# CMD to run the application
+# Start the server
 CMD [ "node", "app.js" ]

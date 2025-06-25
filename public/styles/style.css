@@ -1,0 +1,130 @@
+/* Import Poppins from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9fafb;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 15px 30px;
+    text-align: right;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 30px;
+    text-align: center;
+    color: #222;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.button-link, button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #0077cc;
+    background-color: #0077cc;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.button-link:hover, button:hover {
+    background-color: #005faa;
+    border-color: #005faa;
+}
+
+.app-names {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.app-names div {
+    padding: 10px 20px;
+    background-color: #0099ff;
+    color: white;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 450px;
+    background: white;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.auth-form label {
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+}
+
+.auth-form input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.post {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    max-width: 600px;
+}
+
+.post-text {
+    flex-grow: 1;
+    font-size: 1.1rem;
+}
+
+.edit-post-btn, .delete-post-btn {
+    margin-left: 10px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin: 0 5px;
+}

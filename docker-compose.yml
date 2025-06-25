@@ -1,17 +1,18 @@
-version: '3'
+version: '3.8'
+
 services:
+  web:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      - PORT=3000
+      - SECRET_KEY=cf97ac6cbf5f2a45bf5d5b699773e432040e3303845e49c52fad41407bceb652ccc3b727a2772b78925bc6e8e8a2ba0e32a0c2a93e326957978f84b9c2bb9b16
+      - MONGO_URI=mongodb+srv://nodetest:nodetest@cluster0.lobarh5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+    depends_on:
+      - mongodb
+
   mongodb:
     image: mongo
     ports:
       - '27018:27017'
-
-  socialmediadashboard:
-    build: .
-    image: socialapp
-    ports:
-      - '3000:3000'
-    depends_on:
-      - mongodb
-    environment:
-      PORT: 3000
-      SECRET_KEY: 'your_secret_key'
